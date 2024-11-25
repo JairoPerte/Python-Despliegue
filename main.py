@@ -1,3 +1,3 @@
 import menu
 
-opcion=menu.mostrar_menu
+opcion=menu.mostrar_menu()

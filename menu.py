@@ -1,14 +1,15 @@
 import operaciones
+
 # Función para mostrar el menú
 def mostrar_menu():
    opcion=0
    while(opcion<1 or opcion>5):
       print("1- sumar, 2- restar, 3- multiplicar, 4-dividir y 5- salir")
       opcion = int(input("¿Qué opción elige? "))
-   return opcion
+   opciones(opcion)
 
 # Función para mostrar la opcción
-def opcion(opcion):
+def opciones(opcion):
    num1=0
    num2=0
    while((num1<1 or num1>4) or (num2<1 or num2>4)):
