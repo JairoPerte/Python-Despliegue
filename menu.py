@@ -21,8 +21,12 @@ def opcion(opcion):
       case 3:
          solucion=operaciones.multiplicar(num1,num2)
       case 4:
-         solucion=operaciones.dividir(num1,num2)
-   if(opcion!=5):
+         if(num2 is not 0):
+            solucion=operaciones.dividir(num1,num2)
+         else:
+            print("El divisor no puede ser 0")
+
+   if(opcion is not 5):
       if(solucion is not False):
          print(f"La solución es {solucion}")
       else:
