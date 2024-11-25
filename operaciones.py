@@ -21,3 +21,17 @@ def multiplicar(num1,num2):
         return resultado
     else:
         return False
+
+
+def dividir(num1, num2):
+    if ((type(num1) is int or type(num1) is float) and (type(num2) is int or type(num2) is float) and num2 != 0):
+        resto = num1
+        contador = 0
+        while resto >= num2:
+            resto -= num2
+            contador = contador +1
+        return contador
+    else:
+        return False
+
+
