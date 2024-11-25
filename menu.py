@@ -11,8 +11,8 @@ def opcion(opcion):
    num1=0
    num2=0
    while((num1<1 or num1>4) or (num2<1 or num2>4)):
-    num1 = int(input("¿Cuál es el primer número 1? "))
-    num2 = int(input("¿Cuál es el primer número 2? "))
+    num1 = input("¿Cuál es el primer número 1? ")
+    num2 = input("¿Cuál es el primer número 2? ")
    match opcion:
       case 1:
          solucion=operaciones.sumar(num1,num2)
@@ -23,5 +23,8 @@ def opcion(opcion):
       case 4:
          solucion=operaciones.dividir(num1,num2)
    if(opcion!=5):
-      print(f"La solución es {solucion}")
+      if(solucion is not False):
+         print(f"La solución es {solucion}")
+      else:
+         print("Alguno de los números no son enteros o floats")
       mostrar_menu()
