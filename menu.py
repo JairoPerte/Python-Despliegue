@@ -1,3 +1,4 @@
+import operaciones
 # Función para mostrar el menú
 def mostrar_menu():
    opcion=0
