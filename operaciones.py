@@ -21,7 +21,7 @@ def multiplicar(num1,num2):
     if(num1 is False or num2 is False):
         return False
     resultado=0
-    for i in range(1,num2):
+    for i in range(0,num2):
         resultado+=num1
     return resultado
 
@@ -41,10 +41,10 @@ def dividir(num1, num2):
 # Convierte y si tiene una excepción pues significa que es false  
 def convertir(num):
     try:
-        int(num)
+        num=int(num)
     except ValueError:
         try:
-            float(num)
+            num=float(num)
         except ValueError:
             return False
     return num
