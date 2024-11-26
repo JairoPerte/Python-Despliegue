@@ -21,8 +21,10 @@ def multiplicar(num1,num2):
     if(num1 is False or num2 is False):
         return False
     resultado=0
-    for i in range(1,num2):
+    for i in range(0,abs(num2)):
         resultado+=num1
+    if(num2 < 0):
+        resultado *= -1
     return resultado
 
 # Función dividir
@@ -33,18 +35,23 @@ def dividir(num1, num2):
         return False
     resto = num1
     contador = 0
-    while resto >= num2:
-        resto -= num2
+    while resto >= abs(num2):
+        resto -= abs(num2)
         contador = contador +1
+    if(num2 < 0):
+        contador *= -1
     return contador
 
 # Convierte y si tiene una excepción pues significa que es false  
 def convertir(num):
     try:
-        int(num)
+        # Comprobamos si es entero
+        num=int(num)
     except ValueError:
         try:
-            float(num)
+            # Si no es entero, comprobamos que sea float
+            num=float(num)
         except ValueError:
+            # Si no, es una cadena. Devolemos False para controlar los errores
             return False
     return num
