@@ -1,0 +1,2 @@
+# No queremos enviar el pycache, ya que es donde python guarda los archivos compilados
+__pycache__/
