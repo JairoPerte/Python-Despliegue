@@ -45,12 +45,11 @@ def dividir(num1, num2):
 def factorial_iterativo(num):
     num = convertir_int(num)
     factorial = 1
-    if(num is False):
+    if(num is False or num < 0):
         return False
-    for i in range(1, abs(num)+1):
+    for i in range(1, num+1):
         factorial *= i
-    if(num < 0):
-        factorial *= -1
+   
     return factorial
 
 # Convierte y si tiene una excepción pues significa que es false  

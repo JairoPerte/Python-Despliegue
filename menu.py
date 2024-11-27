@@ -11,8 +11,8 @@ def mostrar_menu():
 # Función para mostrar la opcción
 def opciones(opcion):
    if(opcion!=5 and opcion !=6):
-      num1 = input("¿Cuál es el primer número 1? ")
-      num2 = input("¿Cuál es el primer número 2? ")
+      num1 = input("¿Cuál es el primer número? ")
+      num2 = input("¿Cuál es el segundo número? ")
 
    if(opcion is 6):
       num1 = input("¿Cuál es el número? ")
@@ -35,7 +35,10 @@ def opciones(opcion):
          if(solucion != False):
             print(f"La solución es {solucion}")
          else:
-            print("Alguno de los números no son enteros o floats")
+            if(opcion is 6):
+               print("El número no es positivo o entero")
+            else:
+               print("Alguno de los números no son enteros o floats")
       except NameError:
             print("El divisor no puede ser 0")
       mostrar_menu()
