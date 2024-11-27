@@ -82,10 +82,18 @@ def factorial(num):
         return False
     if(num<0): 
         return False
+    
     if(num==1): return 1
     return num*factorial(num-1)
 
+# La succesión fibonacci recursiva
 def fibonacci(num):
+    num = convertir_int(num)
+    if(num is False):
+        return False
+    if(num<0): 
+        return False
+    
     if num <= 1:
         return num
     return fibonacci(num - 1) + fibonacci(num - 2)

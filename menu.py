@@ -28,14 +28,14 @@ def opciones(opcion):
          solucion=operaciones.factorial(num1)
          solucion=operaciones.factorial_iterativo(num1)
       case 8:
-         solucion=operaciones.fibonacci();
+         solucion=operaciones.fibonacci(num1)
 
    if(opcion != 5):
       try:
          if(solucion != False):
             print(f"La solución es {solucion}")
          else:
-            if(opcion is 6):
+            if(opcion is 6 or opcion is 8):
                print("El número no es positivo o entero")
             else:
                print("Alguno de los números no son enteros o floats")
