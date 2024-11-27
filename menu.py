@@ -26,6 +26,7 @@ def opciones(opcion):
             solucion=operaciones.dividir(num1,num2)
       case 6:
          solucion=operaciones.factorial(num1)
+         solucion=operaciones.factorial_iterativo(num1)
 
    if(opcion != 5):
       try:

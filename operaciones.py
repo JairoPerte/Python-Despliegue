@@ -42,6 +42,25 @@ def dividir(num1, num2):
         contador *= -1
     return contador
 
+def factorial_iterativo(num):
+    num = convertir_int(num)
+    factorial = 1
+    if(num is False or num < 0):
+        return False
+    for i in range(1, num+1):
+        factorial *= i
+   
+    return factorial
+
+# Convierte y si tiene una excepción pues significa que es false  
+def convertir_int(num):
+    try:
+        # Comprobamos si es entero
+        num=int(num)
+    except ValueError:
+        return False
+    return num
+
 # Convierte y si tiene una excepción pues significa que es false  
 def convertir(num):
     try:
@@ -58,7 +77,7 @@ def convertir(num):
 
 # Vamos a hacer una factorial recursivo
 def factorial(num):
-    num=convertir(num)
+    num=convertir_int(num)
     if(num is False):
         return False
     if(num<0): 
