@@ -55,3 +55,13 @@ def convertir(num):
             # Si no, es una cadena. Devolemos False para controlar los errores
             return False
     return num
+
+# Vamos a hacer una factorial recursivo
+def factorial(num):
+    num=convertir(num)
+    if(num is False):
+        return False
+    if(num<0): 
+        return False
+    if(num==1): return 1
+    return num*factorial(num-1)
